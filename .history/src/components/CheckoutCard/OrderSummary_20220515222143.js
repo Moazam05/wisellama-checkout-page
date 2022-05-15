@@ -23,7 +23,7 @@ const OrderSummary = (props) => {
   };
 
   const style = {
-    height: '455px',
+    height: '425px',
   };
   return (
     <div
@@ -59,7 +59,7 @@ const OrderSummary = (props) => {
           </div>
         </div>
 
-        <div className='flex justify-between mt-12 mb-6 xl:mt-10'>
+        <div className='flex justify-between mt-6 mb-6 xl:mt-10'>
           <div className='text-black text-3xl font-medium'>$45.00</div>
           <button
             disabled={check === '' || check === false}

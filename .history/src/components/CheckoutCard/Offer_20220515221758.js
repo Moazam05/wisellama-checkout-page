@@ -26,6 +26,8 @@ const Offer = (props) => {
   };
 
   const style = {
+    // minHeight: "455px",
+    // minHeight: '425px',
     height: '425px',
   };
 

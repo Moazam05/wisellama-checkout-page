@@ -144,28 +144,28 @@ const CheckoutForm = (props) => {
           <InputField label='Zip' value={zipCode} onChange={zipCodeHandler} />
         </div>
       </div>
-      {/* {errorMessage === null ||
+      {errorMessage === null ||
       errorMessage === 'Your card number is incomplete.' ||
       errorMessage === "Your card's expiration date is incomplete." ? (
         // ||
         // errorMessage === "Your card's security code is incomplete."
         <button
           type='submit'
-          disabled={!stripe}
+          // disabled={!stripe}
           // onClick={nextHandler}
           className='mt-7 rounded bg-themeYellow text-black w-full py-1 font-medium flex justify-center items-center'
         >
           $100.00
         </button>
-      ) : ( */}
-      <button
-        type='submit'
-        onClick={nextHandler}
-        className='mt-7 rounded bg-themeYellow text-black w-full py-1 font-medium flex justify-center items-center'
-      >
-        $100.00
-      </button>
-      {/* )} */}
+      ) : (
+        <button
+          type='submit'
+          onClick={nextHandler}
+          className='mt-7 rounded bg-themeYellow text-black w-full py-1 font-medium flex justify-center items-center'
+        >
+          $100.00
+        </button>
+      )}
     </form>
   );
 };

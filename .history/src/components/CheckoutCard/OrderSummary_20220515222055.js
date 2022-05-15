@@ -23,7 +23,7 @@ const OrderSummary = (props) => {
   };
 
   const style = {
-    height: '455px',
+    height: '425px',
   };
   return (
     <div

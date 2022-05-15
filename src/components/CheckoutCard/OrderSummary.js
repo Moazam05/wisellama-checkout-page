@@ -10,7 +10,7 @@ const OrderSummary = (props) => {
   const dispatch = useDispatch();
 
   const [check, setCheck] = useState(
-    useSelector((state) => state.checkout.valueFour) ?? ''
+    useSelector((state) => state.checkout.valueFive) ?? ''
   );
 
   const checkBox = (event) => {

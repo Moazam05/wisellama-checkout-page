@@ -1,12 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 export const checkoutSlice = createSlice({
-  name: "checkout",
+  name: 'checkout',
   initialState: {
-    valueOne: "",
-    valueTwo: "",
+    valueOne: '',
+    valueTwo: '',
     valueThree: { price: 35, status: false },
-    valueFour: "",
+    valueFour: '',
+    valueFive: '',
   },
   reducers: {
     chooseTopic: (state, action) => {
@@ -21,14 +22,19 @@ export const checkoutSlice = createSlice({
       state.valueThree = action.payload;
     },
 
-    summary: (state, action) => {
+    account: (state, action) => {
       // debugger;
       state.valueFour = action.payload;
+    },
+
+    summary: (state, action) => {
+      // debugger;
+      state.valueFive = action.payload;
     },
   },
 });
 
-export const { chooseTopic, askQuestion, offerValue, summary } =
+export const { chooseTopic, askQuestion, offerValue, account, summary } =
   checkoutSlice.actions;
 
 export default checkoutSlice.reducer;

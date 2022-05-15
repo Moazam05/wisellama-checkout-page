@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { AiOutlineGoogle, AiFillApple, AiOutlineTwitter } from 'react-icons/ai';
 import { BsFacebook } from 'react-icons/bs';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { account } from '../../Redux/CheckoutReducer';
 
 const buttonList = [
   {
@@ -28,10 +31,15 @@ const buttonList = [
 const CreateAccount = (props) => {
   const { nextHandler } = props;
 
-  const [value, setValue] = useState('');
+  const dispatch = useDispatch();
+
+  const [value] = useState(
+    useSelector((state) => state.checkout.valueFour) ?? ''
+  );
 
   const buttonHandler = async (e) => {
-    setValue(e);
+    // setValue(e);
+    dispatch(account(e));
     nextHandler();
   };
 

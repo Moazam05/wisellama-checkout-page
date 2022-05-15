@@ -1,0 +1,43 @@
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+
+  theme: {
+    extend: {
+      colors: {
+        login: "#292929",
+        themeYellow: "#F5C60A",
+        themeChip: "#F2EFF7",
+        themeHeading: "#1B1B1B",
+        themeButton: "#FFE600",
+        textColor: "#383838",
+        secondary: "#8792A2",
+      },
+    },
+    container: {
+      padding: {
+        DEFAULT: "1rem",
+        sm: "2rem",
+        lg: "4rem",
+        xl: "5rem",
+        "2xl": "6rem",
+      },
+    },
+    screens: {
+      sm: { min: "576px", max: "767px" },
+      // => @media (min-width: 640px and max-width: 767px) { ... }
+
+      md: { min: "768px", max: "1023px" },
+      // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+      lg: { min: "1024px", max: "1279px" },
+      // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+      xl: { min: "1280px", max: "1535px" },
+      // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+      "2xl": { min: "1536px" },
+      // => @media (min-width: 1536px) { ... }
+    },
+  },
+  plugins: [],
+};

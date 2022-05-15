@@ -1,0 +1,57 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* HTML5 Boilerplate accessible hidden styles */
+.promoted-input-checkbox {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.promoted-checkbox input:checked + label > svg {
+  height: 18px;
+  animation: draw-checkbox ease-in-out 0.2s forwards;
+}
+.promoted-checkbox label:active::after {
+  background-color: #e6e6e6;
+}
+.promoted-checkbox label {
+  color: #00a645;
+  line-height: 40px;
+  cursor: pointer;
+  position: relative;
+}
+.promoted-checkbox label:after {
+  content: "";
+  height: 22px;
+  width: 22px;
+  float: left;
+  border: 2px solid #00a645;
+  border-radius: 3px;
+  transition: 0.15s all ease-out;
+}
+.promoted-checkbox svg {
+  stroke: #00a645;
+  stroke-width: 3px;
+  height: 0;
+  width: 13px;
+  position: absolute;
+  left: -17px;
+  top: 2px;
+  stroke-dasharray: 33;
+}
+@keyframes draw-checkbox {
+  0% {
+    stroke-dashoffset: 33;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
